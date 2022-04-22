@@ -1,0 +1,49 @@
+{
+  "name": "cdktf-integration-serverless-example",
+  "version": "1.0.0",
+  "main": "main.js",
+  "types": "main.ts",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "get": "cdktf get",
+    "build": "tsc",
+    "synth": "cdktf synth",
+    "compile": "tsc --pretty",
+    "watch": "tsc -w",
+    "test": "echo ok",
+    "upgrade": "npm i cdktf@latest cdktf-cli@latest",
+    "upgrade:next": "npm i cdktf@next cdktf-cli@next",
+    "deploy:development": "yarn workspace frontend build && cdktf deploy --auto-approve 'development-*'",
+    "deploy:staging": "yarn workspace frontend build && cdktf deploy --auto-approve 'staging-*'",
+    "deploy:production": "yarn workspace frontend build && cdktf deploy --auto-approve  'production-*'",
+    "destroy:all": "cdktf destroy --auto-approve '*'"
+  },
+  "engines": {
+    "node": ">=10.12"
+  },
+  "dependencies": {
+    "@cdktf/provider-aws": "^7.0.0",
+    "@cdktf/provider-local": "^0.4.0",
+    "cdktf": "^0.10.2",
+    "constructs": "^10.0.63",
+    "cron-time-generator": "^1.3.0",
+    "esbuild": "^0.14.21",
+    "glob": "^7.2.0",
+    "mime-types": "^2.1.34"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mime-types": "^2.1.1",
+    "@types/node": "^15.6.2",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.3.2"
+  },
+  "workspaces": {
+    "packages": [
+      ".",
+      "posts/api/lambda",
+      "frontend/code"
+    ]
+  }
+}
