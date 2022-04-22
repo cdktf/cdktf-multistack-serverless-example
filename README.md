@@ -11,3 +11,5 @@ The application itself is structured in two stacks, one for the backend and one 
 There is a seperate npm script for each of the stages, deploying all stacks needed for each stage.
 
 We will use the local backend for demonstation purposes, but you can use any backend that you like.
+
+The entry point is the [`main.ts`](./main.ts) file, please take a look.
