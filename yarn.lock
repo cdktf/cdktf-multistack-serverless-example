@@ -3355,10 +3355,10 @@ case-sensitive-paths-webpack-plugin@2.3.0:
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.3.0.tgz#23ac613cc9a856e4f88ff8bb73bbb5e989825cf7"
   integrity sha512-/4YgnZS8y1UXXmC02xD5rRrBEu6T5ub+mQHLNRj0fzTRbgdBYhsNo2V5EqwgqrExjxsjtF/OpAKAMkKsxbD5XQ==
 
-cdktf@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.10.0.tgz#c1d5dbe7fc3969ea6030474ccbab5b90616e9811"
-  integrity sha512-F98jj3W2TgPm5StGPfgYfgPwgQk37HREW/6np1AqcDbnYfEEGZhmNKmgokn6edHwMe9kbVyFWl5CA710ktXWmg==
+cdktf@^0.10.2:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.10.3.tgz#b1402579d431bddcf97fe54ee665fa430610c8f1"
+  integrity sha512-Ja9YmHOZz1jqAbbZjK0V2IDsOJUc6MI38nlBu7wSA+ajmUmYOhgW331kxvT+q6nRwO06iqkUtRsR6FfndQ1xvA==
   dependencies:
     archiver "5.3.0"
     json-stable-stringify "^1.0.1"
