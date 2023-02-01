@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import React from "react";
 
 const { REACT_APP_BACKEND_URL } = process.env;

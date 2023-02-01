@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import * as aws from "@cdktf/provider-aws/lib/dynamodb";
 import { Resource } from "cdktf";
 import { Construct } from "constructs";

@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { Resource, TerraformOutput } from "cdktf";
 import { Construct } from "constructs";
 import { PostsApi } from "./api";
