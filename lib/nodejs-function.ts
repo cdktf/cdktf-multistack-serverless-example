@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // source: https://github.com/skorfmann/cdktf-nodejs-function/blob/main/src/index.ts
 // inlined because esbuild is compiled natively and only works on linux for the
 // currently published packages of skorfmann/cdktf-nodejs-function

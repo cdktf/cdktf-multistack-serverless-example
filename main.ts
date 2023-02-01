@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { AwsProvider } from "@cdktf/provider-aws";
 import { App, TerraformStack } from "cdktf";
 import { Construct } from "constructs";

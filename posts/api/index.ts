@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { Resource } from "cdktf";
 import { NodejsFunction } from "../../lib/nodejs-function";
 import { Construct } from "constructs";
