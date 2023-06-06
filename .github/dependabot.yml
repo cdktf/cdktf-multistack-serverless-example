@@ -5,5 +5,9 @@ updates:
     directory: "/frontend/code"
     schedule:
       interval: "weekly"
+    # Specify labels for pull requests
+    labels:
+      - "dependencies"
+      - "automerge"
     # Allow up to 10 open pull requests for dependencies
     open-pull-requests-limit: 10
