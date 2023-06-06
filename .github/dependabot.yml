@@ -1,7 +1,7 @@
 version: 2
 updates:
   # Maintain dependencies for frontend
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/frontend/code"
     schedule:
       interval: "weekly"
