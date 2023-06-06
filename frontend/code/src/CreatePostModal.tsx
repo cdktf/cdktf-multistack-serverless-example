@@ -4,11 +4,11 @@
  */
 
 import React from "react";
-import Modal from "react-modal";
+import ReactModal from "react-modal";
 import { createPost } from "./api";
 import "./CreatePostModal.css";
 
-Modal.setAppElement("#root");
+ReactModal.setAppElement("#root");
 
 type Props = {
   isModalOpen: boolean;
@@ -40,7 +40,7 @@ export function CreatePostModal({ isModalOpen, closeModal }: Props) {
   };
 
   return (
-    <Modal
+    <ReactModal
       isOpen={isModalOpen}
       onRequestClose={closeModal}
       contentLabel="Create Post Modal"
@@ -56,6 +56,6 @@ export function CreatePostModal({ isModalOpen, closeModal }: Props) {
 
         <button onClick={submit}>Submit</button>
       </div>
-    </Modal>
+    </ReactModal>
   );
 }

@@ -30,7 +30,7 @@ export function usePosts() {
       );
       const rows: Post[] = response.data;
       setPosts(rows.reverse());
-    } catch (err) {
+    } catch (err: any) {
       console.error("Error fetching posts:", err);
       setError(err);
     }
@@ -57,7 +57,7 @@ export function usePostDetail(id: string) {
         (response) => {
           setDetail(response);
         },
-        (err) => {
+        (err: any) => {
           console.error("Error fetching post detail", id, err);
           setDetail(null);
         }
