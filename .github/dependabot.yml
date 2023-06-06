@@ -1,0 +1,9 @@
+version: 2
+updates:
+  # Maintain dependencies for frontend
+  - package-ecosystem: "yarn"
+    directory: "/frontend/code"
+    schedule:
+      interval: "weekly"
+    # Allow up to 10 open pull requests for dependencies
+    open-pull-requests-limit: 10
