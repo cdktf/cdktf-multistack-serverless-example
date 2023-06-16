@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import { AwsProvider } from "@cdktf/provider-aws";
 import { App, TerraformStack } from "cdktf";
 import { Construct } from "constructs";
 import { Frontend } from "./frontend";
 import { Posts } from "./posts";
-import { LocalProvider } from "@cdktf/provider-local";
+import { AwsProvider } from "@cdktf/provider-aws/lib/provider";
+import { LocalProvider } from "@cdktf/provider-local/lib/provider";
 
 interface EnvironmentOptions {
   environment: "development" | "staging" | "production";
