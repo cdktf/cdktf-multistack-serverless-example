@@ -21,6 +21,7 @@ git add .
 git commit -m "feat: update to cdktf $CDKTF_VERSION"
 git push origin "cdktf-$CDKTF_VERSION"
 
+gh label create -f "cdktf-update-$CDKTF_VERSION"
 gh pr create --fill --base main --head "cdktf-$CDKTF_VERSION" --title "feat: update to cdktf $CDKTF_VERSION" --label "cdktf-update-$CDKTF_VERSION"
 
 
