@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import * as aws from "@cdktf/provider-aws/lib/dynamodb";
+import { DynamodbTable } from "@cdktf/provider-aws/lib/dynamodb-table";
 import { Resource } from "cdktf";
 import { Construct } from "constructs";
 
@@ -14,12 +14,12 @@ interface PostsStorageOptions {
 }
 
 export class PostsStorage extends Resource {
-  table: aws.DynamodbTable;
+  table: DynamodbTable;
 
   constructor(scope: Construct, id: string, options: PostsStorageOptions) {
     super(scope, id);
 
-    this.table = new aws.DynamodbTable(this, "table", {
+    this.table = new DynamodbTable(this, "table", {
       name: `sls-posts-${
         options.environment + (options.region || options.userSuffix || "")
       }`,

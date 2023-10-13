@@ -3,17 +3,15 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import { Resource } from "cdktf";
+import { DynamodbTable } from "@cdktf/provider-aws/lib/dynamodb-table";
 import { NodejsFunction } from "../../lib/nodejs-function";
 import { Construct } from "constructs";
-import { DynamodbTable } from "@cdktf/provider-aws/lib/dynamodb";
-import { IamRole, IamRolePolicyAttachment } from "@cdktf/provider-aws/lib/iam";
-import {
-  LambdaFunction,
-  LambdaPermission,
-} from "@cdktf/provider-aws/lib/lambdafunction";
-import { Apigatewayv2Api } from "@cdktf/provider-aws/lib/apigatewayv2";
 import path = require("path");
+import { IamRole } from "@cdktf/provider-aws/lib/iam-role";
+import { IamRolePolicyAttachment } from "@cdktf/provider-aws/lib/iam-role-policy-attachment";
+import { LambdaFunction } from "@cdktf/provider-aws/lib/lambda-function";
+import { Apigatewayv2Api } from "@cdktf/provider-aws/lib/apigatewayv2-api";
+import { LambdaPermission } from "@cdktf/provider-aws/lib/lambda-permission";
 
 const lambdaRolePolicy = {
   Version: "2012-10-17",
@@ -36,7 +34,7 @@ interface PostsApiOptions {
   region?: string;
 }
 
-export class PostsApi extends Resource {
+export class PostsApi extends Construct {
   /**
    * base url on which the methods of the posts api can be invoked
    * e.g. GET <endpoint>/posts

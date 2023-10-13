@@ -3,18 +3,16 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import {
-  S3Bucket,
-  S3BucketPolicy,
-  S3BucketWebsiteConfiguration,
-  S3Object,
-} from "@cdktf/provider-aws/lib/s3";
-import { CloudfrontDistribution } from "@cdktf/provider-aws/lib/cloudfront";
-import { Fn, Resource, TerraformOutput } from "cdktf";
+import { Fn, TerraformOutput } from "cdktf";
 import { Construct } from "constructs";
 import * as path from "path";
 import { sync as glob } from "glob";
 import { lookup as mime } from "mime-types";
+import { S3Bucket } from "@cdktf/provider-aws/lib/s3-bucket";
+import { S3BucketWebsiteConfiguration } from "@cdktf/provider-aws/lib/s3-bucket-website-configuration";
+import { S3BucketPolicy } from "@cdktf/provider-aws/lib/s3-bucket-policy";
+import { CloudfrontDistribution } from "@cdktf/provider-aws/lib/cloudfront-distribution";
+import { S3Object } from "@cdktf/provider-aws/lib/s3-object";
 
 const S3_ORIGIN_ID = "s3Origin";
 const API_ORIGIN_ID = "apiOrigin";
@@ -24,7 +22,7 @@ interface FrontendOptions {
   apiEndpoint: string;
 }
 
-export class Frontend extends Resource {
+export class Frontend extends Construct {
   constructor(scope: Construct, id: string, options: FrontendOptions) {
     super(scope, id);
 
